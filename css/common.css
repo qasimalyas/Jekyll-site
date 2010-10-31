@@ -1,0 +1,27 @@
+/* =RESETS */
+body, ul, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, img, blockquote, form, fieldset {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	list-style: none;
+}
+
+/* =TYPOGRAPHY */
+body {
+	font-size: 62.5%;
+	line-height: 18px;
+}
+p, li {
+	font-size: 1.4em;
+}
+
+/* =STRUCTURE */
+#container {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.inline li {
+	display: inline-block;
+	vertical-align: top;
+}
