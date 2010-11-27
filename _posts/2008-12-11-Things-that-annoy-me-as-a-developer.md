@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Things that annoy me in web development
+summary: I work on quite a few projects at my workplace&hellip;
 ---
 
 <h1>{{ page.title }}</h1>

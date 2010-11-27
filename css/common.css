@@ -6,22 +6,109 @@ body, ul, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, img, blockquote, form, fiel
 	list-style: none;
 }
 
+/* =COMMON STYLES */
+header, footer, article, section {
+	display: block;
+}
+body {
+	background-color: #333;
+	color: rgba(255, 255, 255, 1);
+}
+header {
+	margin-bottom: 10px;
+	border-bottom: 2px solid rgba(255, 255, 255, .5);
+	padding-bottom: 15px;
+}
+footer {
+	padding-top: 15px;
+	color: #d7d4c7;
+}
+h1, h2, h3 {
+	padding-bottom: 10px;
+	color: #f8ecc2;
+}
+a {
+	color: rgba(255, 255, 255, 1);
+}
+p {
+	padding-bottom: 10px;
+}
+ol, ul {
+	
+}
+ol {
+	list-style: decimal;
+}
+ul {
+	
+}
+li {
+	padding-bottom: 8px;
+}
+blockquote {
+	margin-left: 50px;
+	font-style: italic;
+	color: rgba(255, 255, 255, .5);
+}
+
 /* =TYPOGRAPHY */
 body {
 	font-size: 62.5%;
 	line-height: 18px;
+	font-family: cambria, georgia, serif;
+}
+header {
+	font-size: 2em;
+}
+	header span {
+		font-size: 1em;
+	}
+h1, h2, h3 {
+	font-weight: normal;
+}
+h1 {
+	font-size: 2.5em;
+	line-height: 32px;
+}
+h2 {
+	font-size: 2em;
+	line-height: 27px;
+}
+h3 {
+	font-size: 1.5em;
+	line-height: 22px;
 }
 p, li {
 	font-size: 1.4em;
+}
+	li p {
+		font-size: 1em;
+	}
+a:hover {
+	text-decoration: none;
+}
+pre {
+	font-size: 1.3em;
+}
+code {
+	color: rgba(255, 255, 255, .5);
 }
 
 /* =STRUCTURE */
 #container {
 	width: 50%;
 	margin: 0 auto;
+	padding-top: 15px;
 }
 
-.inline li {
-	display: inline-block;
-	vertical-align: top;
+/* CLASSES */
+.posts li span {
+	opacity: .7;
+}
+.posts li span::before {
+	opacity: .7;
+	content: " | ";
+}
+.posts li p {
+	padding-bottom: 0;
 }
