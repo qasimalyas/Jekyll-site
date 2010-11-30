@@ -1,1 +1,3 @@
 auto:       --auto
+pygments:   true
+permalink:  /:day-:month-:year/:title.html
