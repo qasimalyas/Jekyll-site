@@ -42,6 +42,12 @@ ol {
 li {
 	padding-bottom: 12px;
 }
+	li p {
+		padding-bottom: 0;
+	}
+ol[id^=Lighter] {
+	list-style-position: outside;
+}
 blockquote {
 	margin-left: 50px;
 	font-style: italic;
@@ -99,18 +105,32 @@ code {
 }
 
 /* Classes -------------- */
+/* List in post */
+.post ul {
+	list-style: disc;
+	list-style-position: inside;
+	padding-left: 20px:
+}
+	.post li:after {
+		content: ".";
+		visibility: hidden;
+		height: 0;
+		display: block;
+		clear: both;
+	}
+		.post li img {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
+
+/* Posts list */
 .posts li span {
 	opacity: .7;
 }
 .posts li span::before {
 	opacity: .7;
 	content: " | ";
-}
-.posts li p {
-	padding-bottom: 0;
-}
-ol[id^=Lighter] {
-	list-style-position: outside;
 }
 
 

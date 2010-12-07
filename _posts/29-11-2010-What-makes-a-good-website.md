@@ -5,4 +5,5 @@ summary: It&rsquo;s the very simple basics and&hellip;
 ---
 <h1>{{ page.title }}</h1>
 
-Your mom
+* Clean code which is then extendible
+* Keeping things simple
