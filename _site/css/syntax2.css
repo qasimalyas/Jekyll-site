@@ -1,0 +1,40 @@
+.highlight {
+	background-color: #141414;
+}
+	.highlight pre {
+		margin: 0 0 15px;
+		padding: 10px;
+		color: #f8f8f8;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+		.highlight code {
+			font-family: Monaco, Courier, monospace;
+			font-size: 12px;
+			line-height: 19px;
+			color: rgba(255, 255, 255, 1);
+		}
+	.highlight .nt {
+		color: #CDA869;
+	}
+	.highlight .na {
+		color: #F9EE98;
+	}
+	.highlight .s {
+		color: #6F87A8;
+	}
+	.highlight .k {
+		color: #CDA869;
+	}
+	.highlight .m {
+		color: #CF6745;
+	}
+	.highlight .kd {
+		color: #F9EE98;
+	}
+	.highlight .s1 {
+		color: #8F9657;
+	}
+	.highlight .mi {
+		color: #CF6745;
+	}

@@ -15,25 +15,25 @@ By using <code>display: inline-block</code> you prevent the above behaviour from
 <h2>Usage</h2>
 
 To use this property lets say we have the following markup:
-<pre class="html:twilight">
-&lt;ul&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="large.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;img src="small.gif" alt="small" /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+{% highlight html %}
+<ul>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="large.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+    <li><img src="small.gif" alt="small" /></li>
+</ul>
+{% endhighlight %}
 
 with the following css
 
-<pre class="css:twilight">
+{% highlight css %}
 * {
 	margin: 0;
 	padding: 0;
@@ -46,6 +46,6 @@ ul {
 		display: inline-block;
 		vertical-align: top;
 	}
-</pre>
+{% endhighlight %}
 
 Here&rsquo;s a <a href="http://jsfiddle.net/hw38v/embedded/result/">demo</a>, resize the window.
