@@ -1,3 +1,5 @@
+/* TextMate Twilight inspired theme. */
+
 .highlight {
 	background-color: #141414;
 }
@@ -23,7 +25,7 @@
 	.highlight .s {
 		color: #6F87A8;
 	}
-	.highlight .k {
+	.highlight .k, .highlight .n {
 		color: #CDA869;
 	}
 	.highlight .m {
@@ -37,4 +39,7 @@
 	}
 	.highlight .mi {
 		color: #CF6745;
+	}
+	.highlight .c {
+		color: #666;
 	}
