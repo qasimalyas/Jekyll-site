@@ -25,6 +25,15 @@ footer {
 	padding-top: 15px;
 	color: #d7d4c7;
 }
+code {
+	color: #CDA869;
+	font-family: Monaco, Courier, monospace;
+	font-size: 12px;
+	line-height: 19px;
+}
+iframe {
+	margin: 10px 0;
+}
 h1, h2, h3 {
 	padding-bottom: 10px;
 	color: #f8ecc2;
@@ -94,7 +103,7 @@ pre {
 	font-size: 1.3em;
 }
 code {
-	color: rgba(255, 255, 255, .5);
+	/*color: rgba(255, 255, 255, .5);*/
 }
 
 /* Structure -------------- */
