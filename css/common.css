@@ -48,12 +48,16 @@ ol {
 	list-style: decimal;
 	list-style-position: inside;
 }
-li {
+li:not(:last-of-type) {
 	padding-bottom: 12px;
 }
 	li p {
 		padding-bottom: 0;
 	}
+		li ul {
+			margin-top: 10px;
+			margin-left: 10px;
+		}
 ol[id^=Lighter] {
 	list-style-position: outside;
 }
@@ -93,9 +97,9 @@ h3 {
 p, li {
 	font-size: 1.4em;
 }
-	li p {
-		font-size: 1em;
-	}
+li li, li p {
+	font-size: 1em;
+}
 a:hover {
 	text-decoration: none;
 }

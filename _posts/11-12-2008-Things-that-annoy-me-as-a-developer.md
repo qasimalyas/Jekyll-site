@@ -6,7 +6,9 @@ summary: I've been involved in various projects at my workplace&hellip;
 
 <h1>{{ page.title }}</h1>
 
-I've been involved in various projects at my workplace and I enjoy working with like-minded developers and designers but there are several things that really get to me and just make me want say &lsquo;FUCK IT&rsquo; and walk out! So here are some of those things:
+Note: This is meant to be a rant so please do not take it seriously. Everyone is allowed to blow off steam now and again. :)
+
+I&rsquo;ve been involved in various projects at my workplace and I enjoy working with like-minded developers and designers but there are several things that really get to me and just make me want say &lsquo;FUCK IT&rsquo; and walk out! So here are some of those things:
 
 1. ![alt text](/images/slap.jpg "bitch slap") When clients can&rsquo;t decided which design to pick. Most arguably the graphic designers take time out to have conference calls and have face-to-face meetings with the clients to examine their brand, identify their business objectives and producing a design which meets those needs. But the clients can&rsquo;t decide between variations of design offered or they want to mix and match making the design, at times, feel unintuitive.  What annoys me the most is that clients start requesting changes through the build making everyones’ job difficult and adding time to the project. At time I just wish I could smack some sense into clients!
 
