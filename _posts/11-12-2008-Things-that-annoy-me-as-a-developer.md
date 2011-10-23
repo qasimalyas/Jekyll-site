@@ -4,7 +4,7 @@ title: Things that annoy me in web development
 summary: I've been involved in various projects at my workplace&hellip;
 ---
 
-<h1>{{ page.title }}</h1>
+#{{ page.title }}
 
 Note: This is meant to be a rant so please do not take it seriously. Everyone is allowed to blow off steam now and again. :)
 

@@ -4,6 +4,8 @@ title: Tips for newbies when going for interviews
 summary: So you want to get into the web industry?
 ---
 
+#{{ page.title }}
+
 Working at [Abacus e-Media](http://abacusemedia.com) I've had the pleasure to be involved in interviewing and assessing candidates at a junior level but also those that are well experienced and looking for new challenges. Predominately most interviewees come through agencies but there have been candidates that are completely inexperienced in interviews; more importantly this being their first interview.
 
 As a result I wanted to give some general tips and advice for interviewees who want to get into web development. So lets get started.
@@ -23,7 +25,7 @@ Be confident in your replies. If you didn't understand the question then ask for
 ##Expand on your answers
 With web development there is no one answer. You should expand on any and all questions the interviewer may ask. But also take control and ask the interviewer whether they'd like to know more. Last thing they need is for you to waffle on when you've already answered the question.
 
-Also be totally open with your replies but don't be aggressive like you know it all.
+Also, be totally open with your replies but don't be aggressive like you know it all.
 
 ##Portfolio
 Graphic designers love showing off their best work and there's no exception for front-end developers. Ok we may not have much pixel pushing abilities but we are masters of multiple discipline and need to think about code implications, performance and browser support. You must have examples of any sites that you have worked on and explain why something was coded in a specific way.

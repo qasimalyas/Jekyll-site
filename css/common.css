@@ -6,25 +6,39 @@ body, ul, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, img, blockquote, form, fiel
 	list-style: none;
 }
 
+@font-face {
+	font-family: NuvoWeb-Medi;
+	src: url(../fonts/NuvoWeb-Medi.woff) format('woff');
+}
+
 /* Common styles -------------- */
 header, footer, article, section {
 	display: block;
 }
+html, body {
+	height: 100%;
+}
 body {
-	background-color: #333;
+	background: #1e1e1e url(../images/blacklinen.png) repeat 0;
 	color: rgba(255, 255, 255, .7);
 }
 header {
 	margin-bottom: 10px;
 	border-bottom: 2px solid rgba(255, 255, 255, .5);
+	padding-top: 15px;
 	padding-bottom: 15px;
 }
+
 footer {
-	margin-top: 10px;
+	margin: -47px auto 0;
 	border-top: 2px solid rgba(255, 255, 255, .5);
 	padding-top: 15px;
+	width: 60%;
 	color: #d7d4c7;
 }
+	footer p {
+		padding-bottom: 0;
+	}
 code {
 	color: #CDA869;
 	font-family: Monaco, Courier, monospace;
@@ -43,6 +57,7 @@ a {
 }
 p {
 	padding-bottom: 10px;
+	line-height: 20px;
 }
 ol {
 	list-style: decimal;
@@ -95,7 +110,7 @@ h3 {
 	line-height: 22px;
 }
 p, li {
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 li li, li p {
 	font-size: 1em;
@@ -112,23 +127,39 @@ code {
 
 /* Structure -------------- */
 #container {
+	min-height: 100%;
 	width: 60%;
 	margin: 0 auto;
-	padding-top: 15px;
 }
+	#container::after {
+		content: '';
+		display: block;
+		padding-bottom: 47px;
+	}
+
+/* Navigation -------------- */
+.navigation {
+	margin-bottom: 15px;
+	border-bottom: 2px solid rgba(255, 255, 255, .5);
+	padding-bottom: 10px;
+}
+	.navigation li {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 5px;
+		padding: 3px 5px;
+	}
 
 /* Classes -------------- */
 /* List in post */
 .post ul {
 	list-style: disc;
 	list-style-position: inside;
-	padding-left: 20px:
+	padding-left: 20px;
 }
 	.post li:after {
-		content: ".";
-		visibility: hidden;
-		height: 0;
-		display: block;
+		content: '';
+		display: table;
 		clear: both;
 	}
 		.post li img {
@@ -136,15 +167,38 @@ code {
 			margin-right: 10px;
 			margin-bottom: 10px;
 		}
+		.post h2 ~ h2 {
+			padding-top: 10px;
+		}
 
 /* Posts list */
-.posts li span {
-	opacity: .7;
+.posts {
+	counter-reset: list;
 }
-.posts li span::before {
-	opacity: .7;
-	content: " | ";
-}
+	.posts li {
+		list-style: none;
+		position: relative;
+		padding-left: 30px;
+	}
+	.posts li::before {
+		position: absolute;
+		top: 50%;
+		margin-top: -15px;
+		margin-left: -30px;
+		content: counter(list);
+		counter-increment: list;
+		font-size: 1.8em;
+		line-height: 20px;
+		font-family: NuvoWeb-Medi, Lucida Grande, Arial, sans-serif;
+	}
+	.posts li span {
+		font-size: .813em;
+		opacity: .7;
+	}
+	.posts li span::before {
+		opacity: .7;
+		content: " | ";
+	}
 
 
 @media only screen and (min-width: 600px) {
