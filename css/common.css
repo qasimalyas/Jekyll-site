@@ -30,10 +30,11 @@ header {
 }
 
 footer {
-	margin: -47px auto 0;
+	margin: -70px auto 0;
 	border-top: 2px solid rgba(255, 255, 255, .5);
 	padding-top: 15px;
 	width: 60%;
+	height: 45px;
 	color: #d7d4c7;
 }
 	footer p {
@@ -134,7 +135,7 @@ code {
 	#container::after {
 		content: '';
 		display: block;
-		padding-bottom: 47px;
+		padding-bottom: 70px;
 	}
 
 /* Navigation -------------- */
@@ -201,11 +202,18 @@ code {
 	}
 
 
-@media only screen and (min-width: 600px) {
-	
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+	#container, footer {
+		width: 90%;
+	}
+	footer {
+		margin-top: 25px;
+		padding-bottom: 10px;
+	}
 }
 
-@media only screen and (min-width: 1000px) {
-	
+@media only screen and (max-device-width: 1000px) {
+	#container, footer {
+		width: 90%;
+	}
 }
-

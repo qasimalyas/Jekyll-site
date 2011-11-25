@@ -2,6 +2,7 @@
 layout: post
 title: display inline-block, my new friend
 summary: One of the css properties that I&rsquo;ve been using&hellip;
+category: css
 ---
 
 #{{ page.title }}
