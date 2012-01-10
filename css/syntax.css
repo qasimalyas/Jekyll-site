@@ -1,47 +1,12 @@
-/* TextMate Twilight inspired theme. */
-
-.highlight {
-	border-radius: 5px;
-	background-color: rgba(20, 20, 20, .5);
-	box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .2)
-}
-	.highlight pre {
-		margin: 0 0 15px;
-		padding: 10px;
-		color: #f8f8f8;
-		white-space: pre-wrap;
-		word-wrap: break-word;
-	}
-		.highlight code {
-			font-family: Monaco, Courier, monospace;
-			font-size: 12px;
-			line-height: 19px;
-			color: rgba(255, 255, 255, 1);
-		}
-	.highlight .nt, .highlight .ni {
-		color: #cda869;
-	}
-	.highlight .na {
-		color: #f9ee98;
-	}
-	.highlight .s {
-		color: #6f87a8;
-	}
-	.highlight .k, .highlight .n {
-		color: #cda869;
-	}
-	.highlight .m {
-		color: #cf6745;
-	}
-	.highlight .kd {
-		color: #f9ee98;
-	}
-	.highlight .s1 {
-		color: #8f9657;
-	}
-	.highlight .mi {
-		color: #cf6745;
-	}
-	.highlight .c {
-		color: #666;
-	}
+.highlight{border-radius:5px;background-color:rgba(20,20,20,0.50);box-shadow:inset 2px 2px 4px rgba(0,0,0,0.20);}
+.highlight pre{margin:0 0 15px;padding:10px;color:#f8f8f8;white-space:pre-wrap;word-wrap:break-word}
+.highlight code{font-family:Monaco,Courier,monospace;font-size:12px;line-height:19px;color:#fff}
+.highlight .nt,.highlight .ni{color:#cda869}
+.highlight .na{color:#f9ee98}
+.highlight .s{color:#6f87a8}
+.highlight .k,.highlight .n{color:#cda869}
+.highlight .m{color:#cf6745}
+.highlight .kd{color:#f9ee98}
+.highlight .s1{color:#8f9657}
+.highlight .mi{color:#cf6745}
+.highlight .c{color:#666}
