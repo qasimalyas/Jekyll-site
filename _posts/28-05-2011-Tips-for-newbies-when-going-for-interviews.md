@@ -1,10 +1,7 @@
 ---
 layout: post
 title: Tips for newbies when going for interviews
-summary: So you want to get into the web industry?
 ---
-
-#{{ page.title }}
 
 Working at [Abacus e-Media](http://abacusemedia.com) I've had the pleasure to be involved in interviewing and assessing candidates at a junior level but also those that are well experienced and looking for new challenges. Predominately most interviewees come through agencies but there have been candidates that are completely inexperienced in interviews; more importantly this being their first interview.
 

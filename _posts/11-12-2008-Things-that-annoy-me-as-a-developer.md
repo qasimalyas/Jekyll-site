@@ -1,33 +1,23 @@
 ---
 layout: post
 title: Things that annoy me in web development
-summary: I've been involved in various projects at my workplace&hellip;
+category: management
+tags: [rant]
 ---
-
-#{{ page.title }}
 
 Note: This is meant to be a rant so please do not take it seriously. Everyone is allowed to blow off steam now and again. :)
 
 I&rsquo;ve been involved in various projects at my workplace and I enjoy working with like-minded developers and designers but there are several things that really get to me and just make me want say &lsquo;FUCK IT&rsquo; and walk out! So here are some of those things:
 
 1. ![alt text](/images/slap.jpg "bitch slap") When clients can&rsquo;t decided which design to pick. Most arguably the graphic designers take time out to have conference calls and have face-to-face meetings with the clients to examine their brand, identify their business objectives and producing a design which meets those needs. But the clients can&rsquo;t decide between variations of design offered or they want to mix and match making the design, at times, feel unintuitive.  What annoys me the most is that clients start requesting changes through the build making everyones’ job difficult and adding time to the project. At time I just wish I could smack some sense into clients!
-
 2.On another note, when you sign something off don&rsquo;t start adding this and that to it. Projects managers, grow some balls and say no – don&rsquo;t get owned.
 
 3. ![alt text](/images/telepathy.jpg "Mind reading") When the front-end developers are expected to style or build something without have a design or spec to consult. Oh let me telepathically read your mind so I can build the site – yea right!
-
 4. Why are there variations in the designs i.e. font sizes, colours and link styles are the main culprits? When this happens you have to keep asking the designer whether this is on purpose or not and both sides start to get frustrated. Then when it comes to a point when the designer checks the build its all wrong! I know this might be unintentional but its things like these that can add additional time, code, and unnecessary botching to sites. With that being said when designers produce style guides they are a life saver. They give you almost a complete picture of the common elements as well as the dimensions (gaps, colours, font sizes etc) which can be set at start.
-
 5. Please consider IE6 in your designs. We (the front-end developers) detest IE6 and can barely stand IE7 so by all means go ahead and have transparent gradients and such but you should be aware that IE6 is a pain in the ass and we need to apply more simple styles for that useless browser!
-
 6. ![alt text](/images/crystal-ball.jpg "Crystal ball") This is more for the front-end guys. Look to the future and not to the past – start using css3 selectors like the attribute selectors, pseudo selectors and type selectors. Yes IE6 won’t understand it but that doesn’t mean we can’t be creative and be stuck with using classes to tack on styles.
-
 7. Another thing that annoys me is hacks! The pile of rubbish that is IE7 and 6 is the reason why I end up working ridiculous hours at times, have grey hairs and mumble endlessly, yet we still have to use hacks/filters to get it display pages correctly. For the love of god please use conditional comments to isolate your hacks and filters. <a href="http://blogs.msdn.com/ie/archive/2005/10/12/480242.aspx">Microsoft knows their browsers</a> are shit and even the admit that all IE hacks should be kept separate in conditional comments.
-
 8. Have more bespoke designs and builds. This encourages creativity and gets us all to talk to each other a bit and learn. But don&rsquo;t pick a project which is going to take 3-4 years to build, some of us might just quit half way because of all the bloody headache with IE6 and pissing around with the build.
-
 9. COST AND TIME PROJECTS PROPERLY!!! I&rsquo;ve been in situations where projects have ridiculous completion dates which require you to give up your life for x number of months. I understand that some projects are loss leaders but still projects need to managed correctly and every function of the website/web application needs to be specified. That way there&rsquo;s a good chance that everything is ready to go. Maybe talk to programmers/front-end developers before writing out the spec. That goes for the designers too, talk to front-end developers!
-
 10. I&rsquo;ve also started to write a short document in each of my builds explaining what each user control, style or snippet of html does.  The point of this is to let the programmer know that there&rsquo;s a reason why something is built in such a way – consider it as a front-end spec.
-
 11. I&rsquo;m going to bitch about myself now because I know I&rsquo;m not perfect either. I tend to just get one with the builds and if I see any issues then I ask, but I should check each aspect of the design before I start the build. What I have started to do is to set a  rule for myself. That is, &ldquo;Do not start a project unless you have read the specification first&rdquo;. If this doesn&rsquo;t happen then I&rsquo;m not going to start the build at all, period. That way I&rsquo;m not going to waste my time or anybody else&rsquo;s. If there isn&rsquo;t a spec then I have a temporary design spec set up which I can use to get the necessary details from the project manager and the designer. That way my balls are covered and I can&rsquo;t be blamed.

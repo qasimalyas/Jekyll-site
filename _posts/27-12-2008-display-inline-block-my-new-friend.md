@@ -1,11 +1,9 @@
 ---
 layout: post
 title: display inline-block, my new friend
-summary: One of the css properties that I&rsquo;ve been using&hellip;
-category: css
+category: code
+tags: [html, css]
 ---
-
-#{{ page.title }}
 
 One of the css properties that I&rsquo;ve been using recently is <code>display: inline-block</code> for elements that are going to be sitting next to one another i.e. thumbnail images or anything similiar.  Traditionally floats would achieve the same effect however, it wouldn&rsquo;t be suitable to use it on elements which may have variable heights. So taking the example of thumbnails images which were 60×60 and one thumbnail which was in the middle and is 60×200, then any smaller images following the large image would start to stack up on one another. This is actually the expected behaviour of floats and is described in the <a href="http://www.w3.org/TR/CSS2/visuren.html#floats">w3c spec</a>.
 

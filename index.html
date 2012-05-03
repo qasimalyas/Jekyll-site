@@ -3,12 +3,23 @@ layout: base
 title: Qasim Alyas | Web developer
 nav: index
 ---
-	<h1>Posts</h1>
-	<ol class="list posts">
-		{% for post in site.posts %}
-		<li>
-			<a href="{{ post.url }}">{{ post.title }}</a><span>{{ post.date | date_to_string }}</span>
-			<p>{{ post.summary }}</p>
-		</li>
-		{% endfor %}
-	</ol>
+	<h1>Hello I&rsquo;m Qasim Alyas. I&rsquo;m a web developer that can make your project ideas a reality.</h1>
+	{% include slideshow.html %}
+	<section>
+		<h2>About me</h2>
+		<p>I&rsquo;m a web developer that works closely with all my clients to understand their business needs and then to provide a solution using the latest web technologies. That means that your web site will give your customers a great desktop, mobile and tablet experience. I also have over five years of experience building wesbites for major publishing companies and local small businesses.</p>
+		<p>Feel free to <a href="/contact.html">get in touch</a>. I&rsquo;d love to hear from you.</p>		
+	</section>
+	<section>
+		<h2>Recent posts</h2>
+		<ol class="posts index">
+			{% for post in site.posts limit:3 %}
+			<li>
+				<h3><a href="{{ post.url }}">{{ post.title }}</a><span class="date">{{ post.date | date_to_string }}</span>{% for tag in post.tags %}<a href="/tags/{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}
+				</h3>
+				<p>{{ post.content | strip_html | truncatewords: 20 }}</p>
+			</li>
+			{% endfor %}
+		</ol>
+		<a href="/posts.html">More posts</a>
+	</section>

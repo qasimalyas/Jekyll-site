@@ -2,7 +2,8 @@
 layout: post
 title: List type positioning and it's quirks
 summary: Simple tip on how to use list positioning and it's workarounds for browser quirks
-category: css
+category: [css]
+published: false
 ---
 
 #{{ page.title }}

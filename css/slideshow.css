@@ -1,0 +1,83 @@
+/*
+
+---
+
+name: Slideshow
+
+description: Provides slideshow functionality
+
+requires: CSS.Main
+
+provides: CSS.Slideshow
+
+...
+
+*/
+.slideshow {
+  position: relative;
+  margin: 0 auto 15px;
+  width: 750px;
+  height: 422px;
+  overflow: hidden;
+}
+.slideshow ul {
+  padding-bottom: 0;
+}
+.slideshow ul li {
+  list-style: none;
+  padding-bottom: 0;
+}
+.slideshow .items li {
+  position: absolute;
+  right: 0;
+  left: 0;
+  width: 750px;
+  height: 422px;
+}
+.slideshow .items li img {
+  display: block;
+}
+.slideshow .thumbs {
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+.slideshow .thumbs li {
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10px;
+  margin-right: 5px;
+  width: 12px;
+  height: 12px;
+  text-indent: -9999px;
+  background-color: #eee;
+  cursor: pointer;
+}
+.slideshow .thumbs li.selected {
+  background-color: #999;
+}
+.slideshow .controls {
+  position: absolute;
+  top: 201px;
+  width: 100%;
+  z-index: 5;
+}
+.slideshow .controls li {
+  display: block;
+  width: 20px;
+  height: 20px;
+  text-indent: -9999px;
+  cursor: pointer;
+  background-color: #f00;
+}
+.slideshow .controls li:hover {
+  opacity: 0.5;
+}
+.slideshow .controls li.previous {
+  float: left;
+}
+.slideshow .controls li.next {
+  float: right;
+}
