@@ -1,0 +1,72 @@
+/*
+
+---
+
+name: Layout
+
+description: Outer and internal structure
+
+requires: CSS.Main
+
+provides: CSS.Layout
+
+...
+
+*/
+
+@import "variables"
+
+// STRUCTURE
+#container
+	max-width 980px
+	margin 0 auto
+	padding 0 (baselineGrid * 5)
+	&::after
+		content ''
+		display block
+		padding-bottom 70px
+
+.content
+	padding-bottom (baselineGrid * 5)
+
+.post .content
+	padding-top (baselineGrid * 3)
+
+// MOBILES
+@media only screen and (max-width: 320px)
+	body
+		//color yellow
+	.navigation
+		float none
+		ul
+			float none
+			li, li a
+				display block
+				padding-left 0
+
+	.portfolio li
+		float none
+		margin-right 0
+		width 100%
+
+@media only screen and (min-width: 480px) and (max-width: 639px)
+	body 
+		//color green
+	.portfolio li
+		margin-bottom (baselineGrid * 2)
+		height 100%
+
+// PORTRAIT TABLETS
+@media only screen and (min-device-width: 640px) and (orientation: portrait)
+	body
+		//color blue
+	.portfolio li
+		width 320px
+		height auto
+		img
+			width: 320px
+
+// LANDSCAPE TABLETS
+@media only screen and (min-device-width: 768px) and (orientation: landscape)
+	body
+		//color red

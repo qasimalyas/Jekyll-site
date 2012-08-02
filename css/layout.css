@@ -1,0 +1,66 @@
+/*
+
+---
+
+name: Layout
+
+description: Outer and internal structure
+
+requires: CSS.Main
+
+provides: CSS.Layout
+
+...
+
+*/
+#container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+#container::after {
+  content: '';
+  display: block;
+  padding-bottom: 70px;
+}
+.content {
+  padding-bottom: 20px;
+}
+.post .content {
+  padding-top: 12px;
+}
+@media only screen and (max-width: 320px) {
+  .navigation {
+    float: none;
+  }
+  .navigation ul {
+    float: none;
+  }
+  .navigation ul li,
+  .navigation ul li a {
+    display: block;
+    padding-left: 0;
+  }
+  .portfolio li {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+  .portfolio li {
+    margin-bottom: 8px;
+    height: 100%;
+  }
+}
+@media only screen and (min-device-width: 640px) and (orientation: portrait) {
+  .portfolio li {
+    width: 320px;
+    height: auto;
+  }
+  .portfolio li img {
+    width: 320px;
+  }
+}
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
+}

@@ -1,0 +1,78 @@
+/*
+
+---
+
+name: Slideshow
+
+description: Provides slideshow functionality
+
+requires: CSS.Main
+
+provides: CSS.Slideshow
+
+...
+
+*/
+
+@import "variables"
+
+.slideshow
+	position relative
+	margin 0 auto (baselineGrid * 4)
+	width slideshowWidth
+	height slideshowHeight
+	//overflow hidden
+	ul
+		padding-bottom 0;
+		li
+			list-style none
+			padding-bottom 0
+	.items li
+		position absolute
+		right 0
+		left 0
+		width slideshowWidth
+		height slideshowHeight
+		img
+			display block
+	.thumbs
+		position absolute
+		bottom 0
+		z-index 2
+		width 100%
+		text-align center
+		background-color rgba(0,0,0,.5)
+		padding-top baselineGrid
+		li
+			display inline-block
+			border-radius 10px
+			margin-right 5px
+			width 12px
+			height 12px
+			text-indent -9999px
+			background-color #fff
+			cursor pointer
+			&.selected
+				background-color #999
+	.controls
+		position absolute
+		top ((slideshowHeight - slideshowControls) / 2)
+		width 100%
+		z-index 5
+		li
+			display block
+			cursor pointer
+			opacity 0.5
+			&.previous
+				float left
+				margin-left -40px
+			&.next
+				float right
+				margin-right -40px
+
+			i
+				width slideshowControls
+				height slideshowControls
+				color #fff;
+				font-size: 40px
+				line-height slideshowControls
