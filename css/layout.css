@@ -14,72 +14,53 @@ provides: CSS.Layout
 
 */
 #container {
-  min-height: 100%;
+  max-width: 980px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 #container::after {
   content: '';
   display: block;
   padding-bottom: 70px;
 }
-@media (min-width: 1200px) {
+.content {
+  padding-bottom: 20px;
 }
-@media (max-width: 480px) {
+.post .content {
+  padding-top: 12px;
 }
-@media (max-width: 767px) {
+@media only screen and (max-width: 320px) {
+  .navigation {
+    float: none;
+  }
+  .navigation ul {
+    float: none;
+  }
+  .navigation ul li,
+  .navigation ul li a {
+    display: block;
+    padding-left: 0;
+  }
+  .portfolio li {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
 }
-@media (min-width: 768px) and (max-width: 979px) {
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+  .portfolio li {
+    margin-bottom: 8px;
+    height: 100%;
+  }
 }
-/*
-// MEDIA QUERIES
-//Smartphones (portrait)
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px)
-	body
-		color red
-
-//iPads (portrait)
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-	#container, footer {
-		width: 745px;
-	}
+@media only screen and (min-device-width: 640px) and (orientation: portrait) {
+  .portfolio li {
+    width: 320px;
+    height: auto;
+  }
+  .portfolio li img {
+    width: 320px;
+  }
 }
-
-// iPads (landscape)
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-	#container, footer {
-		width: 768px;
-		margin: 0;
-	}
+@media only screen and (min-device-width: 768px) and (orientation: landscape) {
 }
-
-// DESKTOP [320 - 480]
-@media only screen and (min-width: 320px) and (max-width: 480px)
-	footer
-		margin-top 25px
-		padding-bottom 10px
-	
-	.navigation li
-		display block
-		margin-right 0
-
-	.portfolio li
-		display block
-		margin 0 auto 10px
-		text-align center
-
-// DESKTOP [MIN 1024]
-@media only screen and (min-width: 1024px)
-	#container
-		width 950px
-	
-	footer
-		width 950px
-	
-	.navigation li:first-child
-		padding-left 0
-
-	//select every nth item
-	.portfolio li:nth-of-type(4n)
-		margin-right 0
-*/

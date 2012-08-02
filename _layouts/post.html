@@ -6,5 +6,7 @@ layout: base
 		{% for tag in page.tags %}
 			<a class="tag" href="/tags/{{ tag| slugize }}">{{ tag }}</a>
 		{% endfor %}
-		{{ content }}
+		<div class="content">
+			{{ content }}
+		</div>
 	</article>

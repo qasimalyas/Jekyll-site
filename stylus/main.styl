@@ -20,6 +20,12 @@ body
 	line-height defaultLineHeight
 	font-family defaultFontFamily
 
+*
+	-moz-box-sizing border-box
+	-webkit-box-sizing border-box
+	box-sizing border-box
+
+
 /* =RESETS */
 body, ul, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, img, blockquote, form, fieldset
 	margin 0
@@ -36,24 +42,31 @@ body
 	color rgba(255, 255, 255, .7)
 
 section
-	margin-bottom 20px
+	margin-bottom (baselineGrid * 5)
 
 header
-	margin-bottom 10px
-	padding-top 15px
-	padding-bottom 15px
+	margin-bottom (baselineGrid * 3)
+	padding-top (baselineGrid * 4)
+	padding-bottom (baselineGrid * 3)
 	> a + span
-		font-size defaultFontSize - 4
+		font-size defaultFontSize - 2
 
 // Sticky footer
 footer
-	margin -70px auto 0
+	margin 0 auto
 	border-top 2px solid rgba(255, 255, 255, .5)
-	padding 15px 10px 0
-	height 45px
-	color #d7d4c7
+	padding 15px 0 0
 	p
 		padding-bottom 0
+
+footer > div 
+	display inline-block
+	vertical-align top
+	margin-right 2.1276595745% 
+	margin-bottom (baselineGrid * 3)
+	width 31.914893617%	
+	&:last-of-type
+		margin-right 0
 
 code
 	color #CDA869
@@ -67,7 +80,7 @@ iframe
 h1, h2, h3, h4, h5, h6
 	padding-bottom 10px
 	color #f8ecc2
-	font-family adelle, serif
+	font-family adelle, sans-serif
 
 a
 	color rgba(255, 255, 255, 1)
@@ -76,10 +89,14 @@ a
 	outline 2px solid rgba(0,128,0,.5)
 
 p
-	padding-bottom 10px
-	line-height 20px
+	padding-bottom (baselineGrid * 3)
+	//line-height (baselineGrid * 5)
+
+p:last-of-type
+	padding-bottom 0
+
 ul, ol
-	padding-bottom 10px
+	padding-bottom (baselineGrid * 3)
 	
 ul li
 	list-style disc
@@ -90,7 +107,7 @@ ol li
 	list-style-position inside
 
 li:not(:last-of-type)
-	padding-bottom 12px
+	padding-bottom (baselineGrid * 3)
 
 li p
 	padding-bottom 0
@@ -103,6 +120,7 @@ ol[id^=Lighter]
 	list-style-position outside
 
 blockquote
+	margin-bottom (baselineGrid * 3)
 	margin-left 50px
 	font-style italic
 	color rgba(255, 255, 255, .5)
@@ -123,6 +141,10 @@ img
 
 // CLASSES
 /* List in post */
+.post h1 ~ .tag
+	margin-left 0
+	margin-right baselineGrid	
+
 .post ul, .post ol
 	list-style disc
 	list-style-position inside
@@ -134,10 +156,10 @@ img
 	li img
 		float left
 		margin-right 10px
-		margin-bottom 10px
+		margin-bottom (baselineGrid * 3)
 
 .post h2 ~ h2
-	padding-top 10px
+	padding-top (baselineGrid * 3)
 
 /* Posts list */
 .posts
@@ -149,12 +171,12 @@ img
 	li::before
 		position absolute
 		top 50%
-		margin-top -15px
+		margin-top -20px
 		margin-left -30px
 		content counter(list)
 		counter-increment list
 		font-size 1.8em
-		line-height 20px
+		line-height (baselineGrid * 5)
 		font-family adelle, serif
 	li span
 		font-size .813em
@@ -172,45 +194,101 @@ img
 	display inline-block
 	margin-left 5px
 	padding: 2px
-	border-radius 5px
 	font-size 11px
 	line-height 12px
 	text-decoration none
-	color #333
-	background-color #F8ECC2
 
 /* Portfolio */
+.portfolio
+	padding-top: (baselineGrid * 3)
 .portfolio li
 	display inline-block
 	vertical-align top
-	margin-right 10px
-	margin-bottom 10px
+	margin-right 2.1276595745% 		// 20 / 940 * 100
+	margin-bottom 2.1276595745% 	// 20 / 940 * 100
 	padding-bottom 0
 	list-style none
-	width 230px
-	height 170px
+	width 31.914893617%				// 300 / 940 * 100
 	overflow hidden
 	position relative
 	img
-		-webkit-transition all 0.2s linear 0.3s
+		display block
+		-webkit-transition opacity 0.2s linear 0.3s
 		-webkit-transform translateZ(0)
+		max-width 100%				// 300 / 940 * 100
 	h2
 		position absolute
-		top 0%
-		height 170px
+		top 0
 		width 100%
 		padding 0
 		font-weight bold
 		font-size 1.6em
-		line-height 170px
+		line-height 169px
 		text-align center
 		-webkit-transition all 0.2s linear 0.3s
 		-webkit-transform scale(5)
 		opacity 0
-	h2 a
-		display block
+	&:nth-child(3n)
+		margin-right 0
 	&:hover h2
 		-webkit-transform scale(1)
 		opacity 1
 	&:hover img
 		opacity .4
+
+
+// Footer tags
+footer .tags a
+	padding-top 0
+	font-size 1em
+	margin-right 5px
+	margin-left 0
+	text-decoration underline
+	&:hover
+		text-decoration none
+
+
+.tags + a
+	text-decoration none
+
+
+
+// TWITTER WIDGET
+.twtr-hd, .twtr-ft
+	display none
+
+.twtr-timeline
+	height auto!important
+
+footer
+	
+	.twtr-widget
+		font-size (defaultFontSize - 2)!important
+		font-family defaultFontFamily!important
+
+	#twtr-widget-1 .twtr-doc, 
+	#twtr-widget-1 .twtr-hd a, 
+	#twtr-widget-1 h3, #twtr-widget-1 h4
+		background-color transparent!important
+
+	#twtr-widget-1 .twtr-new-results, 
+	#twtr-widget-1 .twtr-results-inner, 
+	#twtr-widget-1 .twtr-timeline
+		background-color transparent!important
+
+	.twtr-widget .twtr-tweet-wrap
+		padding-right 0
+		padding-left 0
+
+	.twtr-widget #tweet-id-3> div
+		padding-top 0
+
+	#twtr-widget-1 .twtr-bd, #twtr-widget-1 .twtr-timeline i a, #twtr-widget-1 .twtr-bd p
+		color rgba(255, 255, 255, .7)!important
+
+	#twtr-widget-1 .twtr-tweet a, .twtr-doc a
+		color #fff!important
+		text-decoration underline!important
+
+	.twtr-widget em, .twtr-widget .twtr-new-results
+		font-size (defaultFontSize - 3)!important

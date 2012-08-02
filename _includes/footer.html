@@ -1,3 +1,43 @@
 <footer>
-	<p>I also do my <a href="http://twitter.com/kas187">twitter</a> thing, host all my code on <a href="http://github.com/kas187">github</a> and take the the occasional <a href="http://flickr.com/qasimalyas">photo</a>. Grab the <a href="/atom.xml">Feed</a>.</p>
+	<div>
+		<h3>About</h3>
+		<p>I&rsquo;m a passionate web developer that tries to push the boundries and works closely with all my clients. I have great experience in working with major clients to local small buisnesses. I live with my wife and my offspring Zane.</p>
+	</div><div>
+		<h3>Tweets</h3>
+		<noscript>Holy Balls! You have javascript disabled. Enable it and the force will be with you.</noscript>
+		<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+			new TWTR.Widget({
+				version: 2,
+				type: 'profile',
+				rpp: 3,
+				interval: 30000,
+				width: 'auto',
+				height: 300,
+				theme: {
+					shell: {
+						background: '',
+						color: ''
+					},
+					tweets: {
+						background: '',
+						color: '',
+						links: ''
+					}
+				},
+				features: {
+					scrollbar: true,
+					loop: false,
+					live: true,
+					behavior: 'all'
+				}
+			}).render().setUser('kas187').start();
+		</script>
+	</div><div class="tags">
+		<h3>Browse by tags</h3>
+		{% for post in site.posts %}
+			{% for tag in post.tags %}<a href="/tags/{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}
+		{% endfor %}
+	</div>
+	<a href="/atom.xml" title="Grab the RSS feed"><i class="icon-rss"></i></a>
 </footer>

@@ -12,9 +12,14 @@ provides: CSS.Main
 
 */
 body {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 18px;
-  font-family: cambria, georgia, serif;
+  font-family: arial, sans-serif;
+}
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* =RESETS */
 body,
@@ -45,33 +50,41 @@ body {
 }
 body {
   background: #1e1e1e url("../images/blacklinen.png") repeat;
-  color: rgba(255,255,255,0.70);
+  color: rgba(255,255,255,0.7);
 }
 section {
   margin-bottom: 20px;
 }
 header {
-  margin-bottom: 10px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  margin-bottom: 12px;
+  padding-top: 16px;
+  padding-bottom: 12px;
 }
 header > a + span {
   font-size: 12px;
 }
 footer {
-  margin: -70px auto 0;
-  border-top: 2px solid rgba(255,255,255,0.50);
-  padding: 15px 10px 0;
-  height: 45px;
-  color: #d7d4c7;
+  margin: 0 auto;
+  border-top: 2px solid rgba(255,255,255,0.5);
+  padding: 15px 0 0;
 }
 footer p {
   padding-bottom: 0;
 }
+footer > div {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 2.1276595745%;
+  margin-bottom: 12px;
+  width: 31.914893617%;
+}
+footer > div:last-of-type {
+  margin-right: 0;
+}
 code {
   color: #cda869;
   font-family: Monaco, Courier, monospace;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 18px;
 }
 iframe {
@@ -85,21 +98,23 @@ h5,
 h6 {
   padding-bottom: 10px;
   color: #f8ecc2;
-  font-family: adelle, serif;
+  font-family: adelle, sans-serif;
 }
 a {
   color: #fff;
 }
 *:focus {
-  outline: 2px solid rgba(0,128,0,0.50);
+  outline: 2px solid rgba(0,128,0,0.5);
 }
 p {
-  padding-bottom: 10px;
-  line-height: 20px;
+  padding-bottom: 12px;
+}
+p:last-of-type {
+  padding-bottom: 0;
 }
 ul,
 ol {
-  padding-bottom: 10px;
+  padding-bottom: 12px;
 }
 ul li {
   list-style: disc;
@@ -123,9 +138,10 @@ ol[id^=Lighter] {
   list-style-position: outside;
 }
 blockquote {
+  margin-bottom: 12px;
   margin-left: 50px;
   font-style: italic;
-  color: rgba(255,255,255,0.50);
+  color: rgba(255,255,255,0.5);
 }
 img {
   max-width: 100%;
@@ -143,6 +159,10 @@ img {
   padding: 3px 5px;
 }
 /* List in post */
+.post h1 ~ .tag {
+  margin-left: 0;
+  margin-right: 4px;
+}
 .post ul,
 .post ol {
   list-style: disc;
@@ -159,10 +179,10 @@ img {
 .post ol li img {
   float: left;
   margin-right: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 .post h2 ~ h2 {
-  padding-top: 10px;
+  padding-top: 12px;
 }
 /* Posts list */
 .posts {
@@ -176,7 +196,7 @@ img {
 .posts li::before {
   position: absolute;
   top: 50%;
-  margin-top: -15px;
+  margin-top: -20px;
   margin-left: -30px;
   content: counter(list);
   counter-increment: list;
@@ -204,46 +224,46 @@ img {
   display: inline-block;
   margin-left: 5px;
   padding: 2px;
-  border-radius: 5px;
   font-size: 11px;
   line-height: 12px;
   text-decoration: none;
-  color: #333;
-  background-color: #f8ecc2;
 }
 /* Portfolio */
+.portfolio {
+  padding-top: 12px;
+}
 .portfolio li {
   display: inline-block;
   vertical-align: top;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin-right: 2.1276595745%;
+  margin-bottom: 2.1276595745%;
   padding-bottom: 0;
   list-style: none;
-  width: 230px;
-  height: 170px;
+  width: 31.914893617%;
   overflow: hidden;
   position: relative;
 }
 .portfolio li img {
-  -webkit-transition: all 0.2s linear 0.3s;
+  display: block;
+  -webkit-transition: opacity 0.2s linear 0.3s;
   -webkit-transform: translateZ(0);
+  max-width: 100%;
 }
 .portfolio li h2 {
   position: absolute;
-  top: 0%;
-  height: 170px;
+  top: 0;
   width: 100%;
   padding: 0;
   font-weight: bold;
   font-size: 1.6em;
-  line-height: 170px;
+  line-height: 169px;
   text-align: center;
   -webkit-transition: all 0.2s linear 0.3s;
   -webkit-transform: scale(5);
   opacity: 0;
 }
-.portfolio li h2 a {
-  display: block;
+.portfolio li:nth-child(3n) {
+  margin-right: 0;
 }
 .portfolio li:hover h2 {
   -webkit-transform: scale(1);
@@ -251,4 +271,60 @@ img {
 }
 .portfolio li:hover img {
   opacity: 0.4;
+}
+footer .tags a {
+  padding-top: 0;
+  font-size: 1em;
+  margin-right: 5px;
+  margin-left: 0;
+  text-decoration: underline;
+}
+footer .tags a:hover {
+  text-decoration: none;
+}
+.tags + a {
+  text-decoration: none;
+}
+.twtr-hd,
+.twtr-ft {
+  display: none;
+}
+.twtr-timeline {
+  height: auto !important;
+}
+footer .twtr-widget {
+  font-size: 12px !important;
+  font-family: arial, sans-serif !important;
+}
+footer #twtr-widget-1 .twtr-doc,
+footer #twtr-widget-1 .twtr-hd a,
+footer #twtr-widget-1 h3,
+footer #twtr-widget-1 h4 {
+  background-color: transparent !important;
+}
+footer #twtr-widget-1 .twtr-new-results,
+footer #twtr-widget-1 .twtr-results-inner,
+footer #twtr-widget-1 .twtr-timeline {
+  background-color: transparent !important;
+}
+footer .twtr-widget .twtr-tweet-wrap {
+  padding-right: 0;
+  padding-left: 0;
+}
+footer .twtr-widget #tweet-id-3> div {
+  padding-top: 0;
+}
+footer #twtr-widget-1 .twtr-bd,
+footer #twtr-widget-1 .twtr-timeline i a,
+footer #twtr-widget-1 .twtr-bd p {
+  color: rgba(255,255,255,0.7) !important;
+}
+footer #twtr-widget-1 .twtr-tweet a,
+footer .twtr-doc a {
+  color: #fff !important;
+  text-decoration: underline !important;
+}
+footer .twtr-widget em,
+footer .twtr-widget .twtr-new-results {
+  font-size: 11px !important;
 }
