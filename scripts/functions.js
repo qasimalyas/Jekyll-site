@@ -2,6 +2,18 @@
 
 window.addEvent('domready', function() {
 
+	// STICKY MENU
+	var scrollMenu = $$('.navigation')[0];
+	
+	// Fixed navigation
+	var stickyY = scrollMenu.getPosition().y;
+	window.addEvent('scroll', function () {
+		var y = this.getScroll().y;
+		if (y >= stickyY) scrollMenu.getParent().addClass('fixed')
+		else scrollMenu.getParent().removeClass('fixed')
+	});
+
+	// SLIDESHOW
 	$$('.slideshow').each(function(slideshow) {
 		var thumbs = slideshow.getElements('.thumbs li');
 		var controls = slideshow.getElements('.controls li');

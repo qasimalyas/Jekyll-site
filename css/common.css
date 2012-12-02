@@ -33,6 +33,8 @@ img{max-width:100%}
 .navigation ul li{display:table-cell;padding-bottom:0;font-family:'Ubuntu',sans-serif;}
 .navigation ul li > *{display:block;text-align:center}
 .navigation ul li > a,.navigation ul li > span{font-weight:bold}
+.fixed{height:157px;}
+.fixed nav{position:fixed;top:0;z-index:10;width:100%;background-color:#fff}
 .post ul,.post ol{list-style:disc;list-style-position:inside;}
 .post ul li img,.post ol li img{float:left;margin-right:10px;margin-bottom:12px}
 .post h2{margin-bottom:12px;padding-top:4px}
