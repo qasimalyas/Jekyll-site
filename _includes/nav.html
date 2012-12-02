@@ -1,8 +1,8 @@
 <nav class=navigation>
 	<ul>
-		<li {% if page.nav == 'index' %} class=selected> <span>Home</span> {% else %}> <a href="/index.html">Home</a> {% endif %}</li>
-		<li {% if page.nav == 'portfolio' %} class=selected> <span>Portfolio</span> {% else %}> <a href="/portfolio.html">Portfolio</a> {% endif %}</li>
-		<li {% if page.nav == 'labs' %} class=selected> <span>Labs</span> {% else %}> <a href="/labs.html">Labs</a> {% endif %}</li>
-		<li {% if page.nav == 'posts' %} class=selected> <span>Posts</span> {% else %}> <a href="/posts.html">Posts</a> {% endif %}</li>
+		<li {% if page.nav == 'index' %} class=selected> <span>Home</span><small>no place like it</small> {% else %}> <a href="/index.html">Home</a><small>no place like it</small> {% endif %}</li>
+		<li {% if page.nav == 'portfolio' %} class=selected> <span>Portfolio</span><small>projects i&rsquo;ve worked on</small> {% else %}> <a href="/portfolio.html">Portfolio</a><small>projects i&rsquo;ve worked on</small> {% endif %}</li>
+		<li {% if page.nav == 'labs' %} class=selected> <span>Labs</span><small>experimental stuff</small> {% else %}> <a href="/labs.html">Labs</a><small>experimental stuff</small> {% endif %}</li>
+		<li {% if page.nav == 'posts' %} class=selected> <span>Posts</span><small>my ramblings</small> {% else %}> <a href="/posts.html">Posts</a><small>my ramblings</small> {% endif %}</li>
 	</ul>
 </nav>

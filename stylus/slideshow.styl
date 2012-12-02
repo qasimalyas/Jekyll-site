@@ -15,6 +15,7 @@ provides: CSS.Slideshow
 */
 
 @import "variables"
+@import "mixins"
 
 .slideshow
 	position relative
@@ -23,7 +24,7 @@ provides: CSS.Slideshow
 	height slideshowHeight
 	//overflow hidden
 	ul
-		padding-bottom 0;
+		margin-bottom 0;
 		li
 			list-style none
 			padding-bottom 0
@@ -73,6 +74,6 @@ provides: CSS.Slideshow
 			i
 				width slideshowControls
 				height slideshowControls
-				color #fff;
+				color colour6;
 				font-size: 40px
 				line-height slideshowControls

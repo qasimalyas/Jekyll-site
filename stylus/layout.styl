@@ -15,27 +15,24 @@ provides: CSS.Layout
 */
 
 @import "variables"
+@import "mixins"
 
 // STRUCTURE
 #container
-	max-width 980px
+	max-width 80%
 	margin 0 auto
-	padding 0 (baselineGrid * 5)
+	padding 0 0 (baselineGrid * 5)
 	&::after
 		content ''
 		display block
-		padding-bottom 70px
 
 .content
 	padding-bottom (baselineGrid * 5)
 
-.post .content
-	padding-top (baselineGrid * 3)
-
 // MOBILES
 @media only screen and (max-width: 320px)
-	body
-		//color yellow
+	// body
+	// 	color yellow
 	.navigation
 		float none
 		ul
@@ -49,24 +46,34 @@ provides: CSS.Layout
 		margin-right 0
 		width 100%
 
-@media only screen and (min-width: 480px) and (max-width: 639px)
-	body 
-		//color green
+@media only screen and (min-width: 321px) and (max-width: 480px)
+	// body 
+	// 	color green
 	.portfolio li
-		margin-bottom (baselineGrid * 2)
-		height 100%
+		width (320/384) * 100%
 
-// PORTRAIT TABLETS
-@media only screen and (min-device-width: 640px) and (orientation: portrait)
-	body
-		//color blue
+
+@media only screen and (min-width: 520px) and (max-width: 828px)
+	// body
+	// 	color blue
 	.portfolio li
-		width 320px
-		height auto
+		width (204/416) * 100%
+		&:nth-child(2n)
+			margin-left (8/416) * 100%
+
+@media only screen and (max-width: 700px)
+	.navigation ul li small
+		display none
+
+@media only screen and (min-width: 829px)
+	// body
+	// 	color pink
+	.portfolio li
+		width auto
+		max-width (206/640) * 100%
+		margin-right: (10/682) * 100%
+		&:nth-child(3n)
+			margin-right 0
 		img
-			width: 320px
+			width auto
 
-// LANDSCAPE TABLETS
-@media only screen and (min-device-width: 768px) and (orientation: landscape)
-	body
-		//color red

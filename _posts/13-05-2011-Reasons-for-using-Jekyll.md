@@ -4,7 +4,7 @@ title: Reasons for using Jekyll
 tags: [html, generator]
 ---
 
-My previous incarnation of my site was based upon WordPress which is a great blogging platform. The CMS is dynamic enough that you could do anything with it. I however found it to be a bit too much for my use. I felt that I only used a minority of it&rsquo;s features and desperately wanted to find a better solution, something more lightweight, powerful and fast. This is the point where I came across [Jekyll](https://github.com/mojombo/jekyll/).
+The previous incarnation of my site was based upon WordPress which is a great blogging platform. The CMS is dynamic enough that you could do anything with it. I however found it to be a bit too much for my use. I felt that I only used a minority of it&rsquo;s features and desperately wanted to find a better solution, something more lightweight, powerful and fast. This is the point where I came across [Jekyll](https://github.com/mojombo/jekyll/).
 
 Jekyll is awesome. To quote the author of Jekyll:
 

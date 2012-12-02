@@ -1,3 +1,5 @@
+//@codekit-prepend "modernizr.js", "mootools.core.js", "classes/Loop.js", "classes/SlideShow.js";
+
 window.addEvent('domready', function() {
 
 	$$('.slideshow').each(function(slideshow) {
