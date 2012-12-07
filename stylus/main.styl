@@ -135,6 +135,11 @@ blockquote
 img
 	max-width 100%
 
+.more 
+	font-weight bold
+	text-transform uppercase
+	font-family altFontFamily2
+
 // NAVIGATION
 .navigation
 	padding 1.4rem 0
@@ -173,7 +178,7 @@ img
 	list-style disc
 	list-style-position inside
 	li::after
-		clearfix
+		clearfix()
 	li img
 		float left
 		margin-right 10px
@@ -246,3 +251,30 @@ img
 				color colour4
 		&:hover img
 			opacity .4
+
+/* Post paging */
+.paging
+	text-align right
+	text-transform uppercase
+	font-weight bold
+	font-family altFontFamily2
+	.next
+		margin-left 12px
+
+@media only screen and (max-width: 480px)
+	.paging
+		text-align center
+
+	.flexbox .paging
+		display -moz-flex
+		display -webkit-flex
+		display flex
+		a, span
+			-moz-flex 1
+			-webkit-flex 1
+			flex 1
+			-moz-justify-content center
+			-webkit-justify-content center
+			justify-content center
+		.next
+			margin-left 0

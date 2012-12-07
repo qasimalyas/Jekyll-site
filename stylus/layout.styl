@@ -22,9 +22,6 @@ provides: CSS.Layout
 	max-width 80%
 	margin 0 auto
 	padding 0 0 (baselineGrid * 5)
-	&::after
-		content ''
-		display block
 
 .content
 	padding-bottom (baselineGrid * 5)
@@ -37,9 +34,13 @@ provides: CSS.Layout
 		float none
 		ul
 			float none
-			li, li a
+			li
 				display block
-				padding-left 0
+				a
+					display block
+					padding-left 0
+				> *
+					padding (baselineGrid * 2) 0
 
 	.portfolio li
 		float none

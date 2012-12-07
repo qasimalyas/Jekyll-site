@@ -1,9 +1,22 @@
 ---
 layout: base
 ---
-    <article class="post">
+	<article class="post">
 		<h1>{{ page.title }}</h1>
 		<div class="content">
 			{{ content }}
 		</div>
 	</article>
+	<div class="paging">
+		{% if page.previous.url %}
+			<a class="prev" href="{{page.previous.url}}" title="{{page.previous.title}}">Prev</a>
+		{% else %}
+			<span class="prev">Prev</span>
+		{% endif %}
+
+		{% if page.next.url %}
+			<a class="next" href="{{page.next.url}}" title="{{page.next.title}}">Next</a>
+		{% else %}
+			<span class="next">Next</span>
+		{% endif %}
+	</div>
