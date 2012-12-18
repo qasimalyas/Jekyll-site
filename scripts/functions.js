@@ -1,4 +1,4 @@
-//@codekit-prepend "modernizr.js", "mootools.core.js", "classes/Loop.js", "classes/SlideShow.js";
+//@codekit-prepend "modernizr.js", "mootools.core.js", "classes/Loop.js";
 
 window.addEvent('domready', function() {
 
