@@ -63,9 +63,9 @@ header
 footer
 	a
 		display inline-block
-		margin-right 1rem
+		margin-right .5em
 		text-decoration none
-		font-size 2rem
+		font-size (defaultFontSize + 0.4)	//20px
 
 code
 	color colour4
@@ -142,12 +142,12 @@ img
 
 // NAVIGATION
 .navigation
-	padding 1.4rem 0
+	padding verticalSpacing 0
 	ul
 		display table
 		width 80%
 		margin 0 auto
-		padding-bottom (baselineGrid * 4)
+		padding-bottom verticalSpacing
 		text-transform uppercase
 		box-shadow -8px 20px 16px -24px colour6
 		li
@@ -181,15 +181,15 @@ img
 		clearfix()
 	li img
 		float left
-		margin-right 10px
-		margin-bottom (baselineGrid * 3)
+		margin-right horizontalSpacing
+		margin-bottom verticalSpacing
 
 .post
 	h2
-		margin-bottom (baselineGrid * 3)
-		padding-top baselineGrid
+		margin-bottom verticalSpacing
+		padding-top verticalSpacing
 	h3
-		margin-bottom (baselineGrid * 2)
+		margin-bottom verticalSpacing
 
 
 /* Posts list */
@@ -197,14 +197,11 @@ img
 	li
 		list-style none
 		span
-			font-size 1.6rem
+			font-size defaultFontSize
 			opacity .7
 		.date::before
 			opacity .7
 			content " | "
-		h2
-			font-size 2.4rem
-			line-height 2.8rem
 		h2, h3
 			margin-bottom 0
 
@@ -214,7 +211,7 @@ img
 	li
 		display inline-block
 		vertical-align top
-		margin-bottom 12px
+		//margin-bottom 12px
 		padding-bottom 0
 		list-style none
 		overflow hidden
@@ -233,7 +230,7 @@ img
 			width 100%
 			padding 0
 			font-weight bold
-			font-size 1.6em
+			font-size defaultFontSize
 			text-align center
 			transition all .2s linear .3s
 			-webkit-transform scale(5)

@@ -28,12 +28,16 @@ provides: CSS.Layout
 
 // MOBILES
 @media only screen and (max-width: 320px)
+	#container
+		max-width 94%
+
 	// body
 	// 	color yellow
 	.navigation
 		float none
 		ul
 			float none
+			width 94%
 			li
 				display block
 				a
@@ -50,17 +54,17 @@ provides: CSS.Layout
 @media only screen and (min-width: 321px) and (max-width: 480px)
 	// body 
 	// 	color green
-	.portfolio li
-		width (320/384) * 100%
+	// .portfolio li
+	// 	width (320/384) * 100%
 
 
 @media only screen and (min-width: 520px) and (max-width: 828px)
 	// body
 	// 	color blue
 	.portfolio li
-		width (204/416) * 100%
-		&:nth-child(2n)
-			margin-left (8/416) * 100%
+		// width (204/416) * 100%
+		// &:nth-child(2n)
+		// 	margin-left (8/416) * 100%
 
 @media only screen and (max-width: 700px)
 	.navigation ul li small
@@ -70,11 +74,11 @@ provides: CSS.Layout
 	// body
 	// 	color pink
 	.portfolio li
-		width auto
-		max-width (206/640) * 100%
-		margin-right: (10/682) * 100%
-		&:nth-child(3n)
-			margin-right 0
+		// width auto
+		// max-width (206/640) * 100%
+		// margin-right: (10/682) * 100%
+		// &:nth-child(3n)
+		// 	margin-right 0
 		img
 			width auto
 
