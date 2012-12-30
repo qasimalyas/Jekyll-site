@@ -19,7 +19,7 @@ provides: CSS.Layout
 
 // STRUCTURE
 #container
-	max-width 80%
+	max-width 94%
 	margin 0 auto
 	padding 0 0 (baselineGrid * 5)
 
@@ -28,16 +28,10 @@ provides: CSS.Layout
 
 // MOBILES
 @media only screen and (max-width: 320px)
-	#container
-		max-width 94%
-
-	// body
-	// 	color yellow
 	.navigation
 		float none
 		ul
 			float none
-			width 94%
 			li
 				display block
 				a
@@ -51,34 +45,33 @@ provides: CSS.Layout
 		margin-right 0
 		width 100%
 
-@media only screen and (min-width: 321px) and (max-width: 480px)
-	// body 
-	// 	color green
-	// .portfolio li
-	// 	width (320/384) * 100%
 
+@media only screen and (max-width: 719px)
+	.navigation ul 
+		box-shadow 0 10px 30px -12px colour6
 
-@media only screen and (min-width: 520px) and (max-width: 828px)
-	// body
-	// 	color blue
-	.portfolio li
-		// width (204/416) * 100%
-		// &:nth-child(2n)
-		// 	margin-left (8/416) * 100%
-
-@media only screen and (max-width: 700px)
-	.navigation ul li small
-		display none
 
 @media only screen and (min-width: 829px)
-	// body
-	// 	color pink
-	.portfolio li
-		// width auto
-		// max-width (206/640) * 100%
-		// margin-right: (10/682) * 100%
-		// &:nth-child(3n)
-		// 	margin-right 0
-		img
-			width auto
+	// STRUCTURE
+	#container
+		max-width 80%
 
+	.navigation ul
+		width 80%
+
+	.no-flexbox .portfolio li
+		width 47%
+		&:nth-child(2n)
+			margin-right 0
+
+@media only screen and (min-width: 950px)
+	.no-flexbox .portfolio li
+		width 32%
+		&:nth-child(2n)
+			margin-right (baselineGrid * 3) + .2
+		&:nth-child(3n)
+			margin-right 0	
+
+@media only screen and (min-width: 720px)
+	.navigation ul li a small, .navigation ul li span small
+		display block

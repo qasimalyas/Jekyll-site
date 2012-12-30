@@ -145,20 +145,24 @@ img
 	padding verticalSpacing 0
 	ul
 		display table
-		width 80%
+		width 94%
 		margin 0 auto
-		padding-bottom verticalSpacing
 		text-transform uppercase
-		box-shadow -8px 20px 16px -24px colour6
+		box-shadow 0 10px 32px -18px colour6
 		li
 			display table-cell
-			padding-bottom 0
+			padding-bottom verticalSpacing
 			font-family altFontFamily2
 			> * 
 				display block
 				text-align center
 			> a, > span
 				font-weight bold
+				small
+					display none
+					font-weight normal
+			> a small, > span small
+				color colour6
 
 // STICKY MENU
 .fixed
@@ -169,7 +173,6 @@ img
 		z-index 10
 		width 100%
 		background-color colour2
-
 
 
 // CLASSES
@@ -187,7 +190,6 @@ img
 .post
 	h2
 		margin-bottom verticalSpacing
-		padding-top verticalSpacing
 	h3
 		margin-bottom verticalSpacing
 
@@ -207,15 +209,14 @@ img
 
 /* Portfolio */
 .portfolio
-	padding-top: (baselineGrid * 3)
+	padding-top (baselineGrid * 3)
+	text-align center
 	li
-		display inline-block
-		vertical-align top
-		//margin-bottom 12px
+		position relative
+		margin-bottom (baselineGrid * 3)
 		padding-bottom 0
 		list-style none
 		overflow hidden
-		position relative
 		img
 			display block
 			transition opacity .2s linear .3s
@@ -230,7 +231,7 @@ img
 			width 100%
 			padding 0
 			font-weight bold
-			font-size defaultFontSize
+			font-size (defaultFontSize + .4)
 			text-align center
 			transition all .2s linear .3s
 			-webkit-transform scale(5)
@@ -251,27 +252,32 @@ img
 
 /* Post paging */
 .paging
-	text-align right
+	margin (baselineGrid * 3) 0 (baselineGrid * 4)
 	text-transform uppercase
 	font-weight bold
 	font-family altFontFamily2
-	.next
-		margin-left 12px
-
-@media only screen and (max-width: 480px)
-	.paging
+	&::after
+		clearfix()
+	a, span
+		float left
+		width 50%
 		text-align center
+	small
+		display block
 
-	.flexbox .paging
-		display -moz-flex
-		display -webkit-flex
-		display flex
-		a, span
-			-moz-flex 1
-			-webkit-flex 1
-			flex 1
-			-moz-justify-content center
-			-webkit-justify-content center
-			justify-content center
-		.next
-			margin-left 0
+// NO FLEXBOX
+.no-flexbox
+	.portfolio
+		li
+			display inline-block
+			vertical-align top
+			margin-right (baselineGrid * 3) + .2
+
+// FLEXBOX
+.flexbox .portfolio
+	display -webkit-flex
+	-webkit-justify-content space-around
+	-webkit-flex-wrap wrap
+	display flex
+	justify-content space-around
+	flex-wrap wrap
