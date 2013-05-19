@@ -1,4 +1,3 @@
-auto:       true
 markdown:   rdiscount
 pygments:   true
 permalink:  /:day-:month-:year/:title.html
