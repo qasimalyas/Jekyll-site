@@ -1,0 +1,75 @@
+/*
+
+---
+
+name: Layout
+
+description: Outer and internal structure
+
+requires: CSS.Main
+
+provides: CSS.Layout
+
+...
+
+*/
+#container {
+  max-width: 94%;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+.content {
+  padding-bottom: 2rem;
+}
+.flexbox .post {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: colummn;
+  flex-direction: column;
+}
+.flexbox .post .paging {
+  -webkit-order: 2;
+  order: 2;
+}
+@media only screen and (max-width: 320px) {
+  .navigation {
+    float: none;
+  }
+  .navigation ul {
+    float: none;
+  }
+  .navigation ul li {
+    display: block;
+  }
+  .navigation ul li a {
+    display: block;
+    padding-left: 0;
+  }
+  .navigation ul li > * {
+    padding: 0.8rem 0;
+  }
+  .portfolio li {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 829px) {
+  #container {
+    width: 60%;
+  }
+  .navigation ul {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 720px) {
+  .navigation ul li a small,
+  .navigation ul li span small {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1199px) {
+  .navigation ul {
+    width: 1024px;
+  }
+}

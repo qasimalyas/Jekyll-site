@@ -1,0 +1,13 @@
+<div class="paging">
+	{% if page.previous.url %}
+		<a class="prev" href="{{page.previous.url}}">Previous post<small>{{page.previous.title}}</small></a>
+	{% else %}
+		<span class="prev">No more posts</span>
+	{% endif %}
+
+	{% if page.next.url %}
+		<a class="next" href="{{page.next.url}}">Next post<small>{{page.next.title}}</small></a>
+	{% else %}
+		<span class="next">No more posts</span>
+	{% endif %}
+</div>

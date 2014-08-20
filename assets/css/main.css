@@ -1,0 +1,279 @@
+/*
+
+---
+
+name: Main
+
+description: Base styles for elements
+
+provides: CSS.Main
+
+...
+
+*/
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1.375;
+  font-family: arial, sans-serif;
+}
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* =RESETS */
+body,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+blockquote,
+form,
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  color: #333;
+}
+section {
+  margin-bottom: 1.6rem;
+}
+header {
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+}
+header > span {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 1.6rem;
+}
+footer a {
+  display: inline-block;
+  margin-right: 0.5em;
+  text-decoration: none;
+  font-size: 2rem;
+}
+code {
+  color: #cc1414;
+  font-size: 1.2rem;
+  font-family: Monaco, Courier, monospace;
+}
+iframe {
+  margin: 1.6rem 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #256697;
+}
+a {
+  color: #cc1414;
+  text-decoration: none;
+  -webkit-transition: color 0.3s linear 0;
+  transition: color 0.3s linear 0;
+}
+a:hover {
+  color: #256697;
+}
+*:focus {
+  outline: 2px solid #cbe9fc;
+}
+p {
+  margin-bottom: 1.6rem;
+}
+p:last-of-type + * {
+  margin-top: 1.6rem;
+}
+p:last-of-type {
+  margin-bottom: 0;
+}
+li:not(:last-of-type) {
+  padding-bottom: 1.6rem;
+}
+li p {
+  padding-bottom: 0;
+}
+ol[id^=Lighter] {
+  list-style-position: outside;
+}
+blockquote {
+  margin-bottom: 1.6rem;
+  margin-left: 50px;
+  font-style: italic;
+  color: #256697;
+}
+blockquote:before {
+  position: absolute;
+  margin-left: -2%;
+  content: "\275d";
+}
+img {
+  max-width: 100%;
+}
+.offset {
+  position: absolute;
+  left: -9999px;
+}
+.more {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+}
+.navigation {
+  padding: 0.5em 0;
+  background-color: #fff;
+}
+.navigation ul {
+  display: table;
+  width: 94%;
+  margin: 0 auto;
+  padding-left: 0;
+  text-transform: uppercase;
+  border-bottom: 2px solid #c2c2c2;
+}
+.navigation ul li {
+  display: table-cell;
+  padding-bottom: 0.5em;
+  font-family: 'Roboto', sans-serif;
+}
+.navigation ul li > * {
+  display: block;
+  text-align: center;
+}
+.navigation ul li > a,
+.navigation ul li > span {
+  font-weight: bold;
+}
+.navigation ul li > a small,
+.navigation ul li > span small {
+  display: none;
+  font-weight: normal;
+}
+.navigation ul li > a small,
+.navigation ul li > span small {
+  color: #333;
+}
+.navigation ul li.selected a {
+  color: #333;
+}
+.fixed {
+  height: 157px;
+}
+.fixed nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+}
+/* Posts list */
+.posts h2 span {
+  margin-left: 0.5em;
+  font-size: 1.6rem;
+}
+/* Portfolio */
+.portfolio {
+  padding-top: 1.2rem;
+  text-align: center;
+}
+.portfolio li {
+  position: relative;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0;
+  list-style: none;
+  overflow: hidden;
+}
+.portfolio li img {
+  display: block;
+  -webkit-transition: opacity 0.2s linear 0.3s;
+  transition: opacity 0.2s linear 0.3s;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  max-width: 100%;
+  width: 100%;
+}
+.portfolio li h2 {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  padding: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  -webkit-transition: all 0.2s linear 0.3s;
+  transition: all 0.2s linear 0.3s;
+  -webkit-transform: scale(5);
+  -moz-transform: scale(5);
+  transform: scale(5);
+  opacity: 0;
+}
+.portfolio li h2 a {
+  font-weight: normal;
+}
+.portfolio li:hover h2 {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.portfolio li:hover h2 > a {
+  color: #cc1414;
+}
+.portfolio li:hover img {
+  opacity: 0.4;
+}
+/* Post paging */
+.paging {
+  margin: 1.2rem 0 1.6rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+.paging::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.paging a,
+.paging span {
+  float: left;
+  width: 50%;
+  text-align: center;
+}
+.paging small {
+  display: block;
+}
+.no-flexbox .portfolio li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 1.4rem;
+}
+.flexbox .portfolio {
+  display: -webkit-flex;
+  -webkit-justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
